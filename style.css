@@ -1,0 +1,49 @@
+body {
+  background-color: antiqueWhite;
+}
+
+/* index.html */
+
+.loader {
+  background-color: black;
+  color: white;
+}
+
+#demo {
+  font-size: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  padding: 200px 0;
+  text-align: center;
+}
+
+/* home.html */
+
+.jumbotron {
+  background-color: navajoWhite;
+}
+
+/* Text Animation */
+
+.animate-bottom {
+  position: relative;
+  animation-name: animate;
+  animation-duration: 1s;
+}
+
+@keyframes animate {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
