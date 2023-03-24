@@ -33,7 +33,7 @@
     <div class="container">
       <!-- Nav Bar -->
       <nav class="navbar">
-        <ul class="nav nav-tabs navbar-fixed-to-top">
+        <ul class="nav nav-tabs">
           <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="requirements.html">Job Requirements</a></li>
@@ -41,6 +41,50 @@
           <li class="active"><a href="prosandcons.html">Pros & Cons</a></li>
         </ul>
       </nav>
+      <button type="button" class="collapsible">Open Section 1</button>
+      <div class="content">
+        <p>
+          <br />
+          Hello
+          <br />
+        </p>
+      </div>
+      <button type="button" class="collapsible">Open Section 2</button>
+      <div class="content">
+        <p>
+          <br />
+          Change Text
+          <br />
+        </p>
+      </div>
+      <button type="button" class="collapsible">Open Section 3</button>
+      <div class="content">
+        <p>
+          <br />
+          TestingTestingTestingTestingTestingTestingTesting
+          TestingTestingTestingTestingTestingTestingTestingTestingTestingTesting
+          TestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTesting
+          TestingTesting
+          <br />
+        </p>
+      </div>
+
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function () {
+            this.classList.toggle("activer");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+      </script>
     </div>
   </body>
 </html>
