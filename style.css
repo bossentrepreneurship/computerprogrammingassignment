@@ -156,4 +156,16 @@ q {
   display: none;
   overflow: hidden;
   background-color: white;
+  
+  
+  .collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.activer:after {
+  content: "\2212";
 }
