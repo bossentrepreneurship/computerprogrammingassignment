@@ -189,9 +189,13 @@ q {
   font-size: 17px;
 }
 
-.activer,
+
 .collapsible:hover {
   background-color: darkgreen;
+}
+
+.happy:hover{
+  background-color: darkRed;
 }
 
 .content {
