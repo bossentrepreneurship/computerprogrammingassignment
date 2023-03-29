@@ -9,6 +9,49 @@ body {
   color: white;
 }
 
+.percent{
+	color: red;
+    font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background-color: DarkSalmon;
+  color: white;
+  width: 101%;
+}
+
+.pop-up-text {
+  position: relative;
+  display: inline;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pop-up {
+  line-height: 1.5;
+  font-size: 14px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  top:100%;
+  left:0;
+  border: 2px solid black;
+  padding: 10px;
+  display: none;
+  color: black;
+  z-index: 10;
+}
+
+.pop-up-text:hover .pop-up {
+  display: block;
+}
+
+.class{
+	font-weight: 800;
+}
+
 #demo {
   font-size: 100px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
