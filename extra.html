@@ -1,3 +1,309 @@
+<style>
+  body {
+    background-color: antiqueWhite;
+  }
+
+  /* index.html */
+
+  .loader {
+    background-color: black;
+    color: white;
+  }
+
+  .percent {
+    color: red;
+    font-weight: bold;
+  }
+
+  footer {
+    text-align: center;
+    background-color: DarkSalmon;
+    color: white;
+    width: 101%;
+  }
+
+  .pop-up-text {
+    position: relative;
+    display: inline;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .pop-up {
+    line-height: 1.5;
+    font-size: 14px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 2px solid black;
+    padding: 10px;
+    display: none;
+    color: black;
+    z-index: 10;
+  }
+
+  .pop-up-text:hover .pop-up {
+    display: block;
+  }
+
+  .class {
+    font-weight: 800;
+  }
+
+  #demo {
+    font-size: 100px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    padding: 200px 0;
+    text-align: center;
+  }
+
+  /* home.html */
+
+  .jumbotron {
+    background-color: navajoWhite;
+  }
+
+  /* Text Animation */
+
+  .animate-bottom {
+    position: relative;
+    animation-name: animate;
+    animation-duration: 1s;
+  }
+
+  @keyframes animate {
+    from {
+      bottom: -100px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+
+  /* Slideshow */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    background: #bdb76b;
+  }
+
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add a background color to the active dot/circle */
+  .activer,
+  .dot:hover {
+    background-color: #ff0000;
+  }
+
+  /* Add an italic font style to all quotes */
+  q {
+    font-style: italic;
+  }
+
+  /* Add a blue color to the author */
+  .author {
+    color: dodgerblue;
+  }
+
+  /* Collapsible Boxes */
+
+  .collapsible {
+    background-color: #808080;
+    color: white;
+    cursor: pointer;
+    padding: 21px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+  }
+
+  .collapsible:hover {
+    background-color: darkgreen;
+  }
+
+  .happy:hover {
+    background-color: darkRed;
+  }
+
+  .content {
+    padding: 0 20px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .collapsible:after {
+    content: "\002B";
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .activer:after {
+    content: "\2212";
+  }
+
+  .time-line-box {
+    height: 100px;
+    padding: 100px 0;
+    width: 100%;
+    background-color: #dadefe;
+  }
+
+  .time-line-box .timeline {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+  }
+
+  .time-line-box .timestamp {
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-line-box .status {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #455efc;
+    position: relative;
+    transition: all 200ms ease-in;
+  }
+  .time-line-box .status span {
+    padding-top: 8px;
+  }
+  .time-line-box .status span:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #455efc;
+    border-radius: 12px;
+    border: 2px solid #455efc;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease-in;
+  }
+
+  .swiper-container {
+    width: 95%;
+    margin: auto;
+    overflow-y: auto;
+  }
+  .swiper-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-y: auto;
+    justify-content: center;
+  }
+  .swiper-container::-webkit-scrollbar-track {
+    background: #a8a8a8b6;
+  }
+  .swiper-container::-webkit-scrollbar {
+    height: 15px;
+  }
+  .swiper-container::-webkit-scrollbar-thumb {
+    background: #4f4f4f !important;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    height: 100%;
+    position: relative;
+  }
+
+  .date {
+    font-weight: bold;
+  }
+
+  .status {
+    font-weight: bold;
+  }
+</style>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -177,9 +483,7 @@
             href="https://www.dice.com/career-advice/software-developer-salary-necessary-skills-bonuses-more"
             >Dice Jobs</a
           >
-        </p>
-        <br />
-        <p>
+          <br />
           Weekly Working Hours Source:
           <a
             href="https://alcor-bpo.com/your-own-rd-office-news/work-life-balance-for-a-software-engineer/"
