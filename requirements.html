@@ -1,225 +1,205 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <title>Job Requirements</title>
-  </head>
-  <!-- Main Content -->
-  <body>
-    <!-- Container -->
-    <div class="container">
-      <!-- Nav Bar -->
-      <nav class="navbar">
-        <ul class="nav nav-tabs navbar-fixed-to-top">
-          <li><a href="home.html">Home</a></li>
-          <li class="active">
-            <a href="requirements.html">Job Requirements</a>
-          </li>
-          <li><a href="prosandcons.html">Pros & Cons</a></li>
-          <li><a href="extra.html">Extra Information</a></li>
-        </ul>
-      </nav>
-      <center>
-        <h1><b>How To Be A Software Engineer</b></h1>
-      </center>
-      <br />
-      <center>
-        <h2><b>High School</b></h2>
-      </center>
-
-      <div class="slideshow-container">
-        <div class="mySlides">
-          <p>
-            Minimum Grade Of <span class="percent">70%</span> In
-            <span class="class">Advanced Functions</span>
-          </p>
-        </div>
-
-        <div class="mySlides">
-          <p>
-            Minimum Grade Of <span class="percent">70%</span> In
-            <span class="class">Calculus And Vectors</span>
-          </p>
-        </div>
-
-        <div class="mySlides">
-          <p>
-            Minimum Grade Of <span class="percent">70%</span> In
-            <span class="class">Chemistry</span>
-          </p>
-        </div>
-
-        <div class="mySlides">
-          <p>
-            Minimum Grade Of <span class="percent">70%</span> In
-            <span class="class">Physics</span>
-          </p>
-        </div>
-
-        <div class="mySlides">
-          <p>
-            Minimum Grade Of <span class="percent">70%</span> In
-            <span class="class">Language</span>
-          </p>
-        </div>
-
-        <div class="mySlides">
-          <p>
-            Reccomended Grade Of <span class="percent">90%</span> In
-            <span class="class">Computer Science</span>
-          </p>
-          <p style="color: darkSlateBlue;"><b>(Not Required)</b></p>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">
-          <div class="glyphicon glyphicon-chevron-left"></div>
-        </a>
-        <a class="next" onclick="plusSlides(1)">
-          <div class="glyphicon glyphicon-chevron-right"></div>
-        </a>
-      </div>
-
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-      </div>
-
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-          showSlides((slideIndex += n));
-        }
-
-        function currentSlide(n) {
-          showSlides((slideIndex = n));
-        }
-
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = slides.length;
-          }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" activer", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " activer";
-        }
-      </script>
-
-      <center>
-        <h1><b>University</b></h1>
-      </center>
-
-      <p>
-        To be a software engineer, you will need <b>university education</b>.
-        You have to complete university with a
-        <b>bachelor's degree in computer science </b> or
-        <b> software engineering</b>. This means that you will need to stay at
-        university for at least <b>4 years</b>.
-      </p>
-
-      <center>
-        <h1><b>Other Reccomendations</b></h1>
-      </center>
-
-      <p>
-        Employers will not only look at the things you do in school. They will
-        also look at what you do outside of school. Your odds of being hired
-        will drastically improve if you get involved in extracurricular
-        activities. These activities may include participating in
-        <span class="pop-up-text"
-          >hackathons<span class="pop-up"
-            >An event in which a large number of people meet up to engage in
-            collaborative computer programming to solve problems or build
-            programs.</span
-          ></span
-        >,
-        <span class="pop-up-text"
-          >coding competitions<span class="pop-up"
-            >An event where people try to be the first to solve coding
-            problems.</span
-          ></span
-        >, and even going to
-        <span class="pop-up-text"
-          >coding bootcamp<span class="pop-up"
-            >A camp where people learn to write and apply code. These camps can
-            last anywhere from a week to half a year. To apply to coding
-            bootcamp, you do not need any prior experience.</span
-          ></span
-        >. Although it is not required, being able to communicate in a different
-        language will not hurt your chances of being hired.
-      </p>
-      <br />
-      <br />
-      <br />
-      <img
-        src="pngtree-business-concept-hackathon-programming-technology-png-image_5927140-removebg-preview.png"
-        alt="hackathon"
-        height="200px"
-      />
-
-      <img
-        src="436-4364523_competitive-coding-poster-hd-png-download-removebg-preview.png"
-        alt="competition"
-        height="200px"
-      />
-
-      <img
-        src="Coding-Bootcamp-Ratings-Dice-removebg-preview.png"
-        alt="bootcamp"
-        height="200px"
-      />
-
-      <footer>
-        <p>
-          High Schools Requirement Information Source:
-          <a
-            href="https://uwaterloo.ca/future-students/programs/software-engineering"
-            >University Of Waterloo</a
-          >
-          <br />
-          Definition Source:
-          <a href="https://languages.oup.com/">Oxford Languages</a>
-        </p>
-      </footer>
-    </div>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+			crossorigin="anonymous"
+			/>
+		<!-- Bootstrap JavaScript -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"
+			></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Job Requirements</title>
+	</head>
+	<!-- Main Content -->
+	<body>
+		<!-- Container -->
+		<div class="container">
+			<!-- Nav Bar -->
+			<nav class="navbar">
+				<ul class="nav nav-tabs navbar-fixed-to-top">
+					<li><a href="home.html">Home</a></li>
+					<li class="active">
+						<a href="requirements.html">Job Requirements</a>
+					</li>
+					<li><a href="prosandcons.html">Pros & Cons</a></li>
+					<li><a href="extra.html">Extra Information</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+				</ul>
+			</nav>
+			<center>
+				<h1><b>How To Be A Software Engineer</b></h1>
+			</center>
+			<br />
+			<center>
+				<h2><b>High School</b></h2>
+			</center>
+			<div class="slideshow-container">
+				<div class="mySlides">
+					<p>
+						Minimum Grade Of <span class="percent">70%</span> In
+						<span class="class">Advanced Functions</span>
+					</p>
+				</div>
+				<div class="mySlides">
+					<p>
+						Minimum Grade Of <span class="percent">70%</span> In
+						<span class="class">Calculus And Vectors</span>
+					</p>
+				</div>
+				<div class="mySlides">
+					<p>
+						Minimum Grade Of <span class="percent">70%</span> In
+						<span class="class">Chemistry</span>
+					</p>
+				</div>
+				<div class="mySlides">
+					<p>
+						Minimum Grade Of <span class="percent">70%</span> In
+						<span class="class">Physics</span>
+					</p>
+				</div>
+				<div class="mySlides">
+					<p>
+						Minimum Grade Of <span class="percent">70%</span> In
+						<span class="class">Language</span>
+					</p>
+				</div>
+				<div class="mySlides">
+					<p>
+						Reccomended Grade Of <span class="percent">90%</span> In
+						<span class="class">Computer Science</span>
+					</p>
+					<p style="color: darkSlateBlue;"><b>(Not Required)</b></p>
+				</div>
+				<a class="prev" onclick="plusSlides(-1)">
+					<div class="glyphicon glyphicon-chevron-left"></div>
+				</a>
+				<a class="next" onclick="plusSlides(1)">
+					<div class="glyphicon glyphicon-chevron-right"></div>
+				</a>
+			</div>
+			<div class="dot-container">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+				<span class="dot" onclick="currentSlide(6)"></span>
+			</div>
+			<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+				  showSlides((slideIndex += n));
+				}
+				
+				function currentSlide(n) {
+				  showSlides((slideIndex = n));
+				}
+				
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {
+				    slideIndex = 1;
+				  }
+				  if (n < 1) {
+				    slideIndex = slides.length;
+				  }
+				  for (i = 0; i < slides.length; i++) {
+				    slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				    dots[i].className = dots[i].className.replace(" activer", "");
+				  }
+				  slides[slideIndex - 1].style.display = "block";
+				  dots[slideIndex - 1].className += " activer";
+				}
+			</script>
+			<center>
+				<h1><b>University</b></h1>
+			</center>
+			<p>
+				To be a software engineer, you will need <b>university education</b>.
+				You have to complete university with a
+				<b>bachelor's degree in computer science </b> or
+				<b> software engineering</b>. This means that you will need to stay at
+				university for at least <b>4 years</b>.
+			</p>
+			<center>
+				<h1><b>Other Reccomendations</b></h1>
+			</center>
+			<p>
+				Employers will not only look at the things you do in school. They will
+				also look at what you do outside of school. Your odds of being hired
+				will drastically improve if you get involved in extracurricular
+				activities. These activities may include participating in
+				<span class="pop-up-text"
+					>hackathons<span class="pop-up"
+					>An event in which a large number of people meet up to engage in
+				collaborative computer programming to solve problems or build
+				programs.</span
+					></span
+					>,
+				<span class="pop-up-text"
+					>coding competitions<span class="pop-up"
+					>An event where people try to be the first to solve coding
+				problems.</span
+					></span
+					>, and even going to
+				<span class="pop-up-text"
+					>coding bootcamp<span class="pop-up"
+					>A camp where people learn to write and apply code. These camps can
+				last anywhere from a week to half a year. To apply to coding
+				bootcamp, you do not need any prior experience.</span
+					></span
+					>. Although it is not required, being able to communicate in a different
+				language will not hurt your chances of being hired.
+			</p>
+			<br />
+			<br />
+			<br />
+			<img
+				src="pngtree-business-concept-hackathon-programming-technology-png-image_5927140-removebg-preview.png"
+				alt="hackathon"
+				height="200px"
+				/>
+			<img
+				src="436-4364523_competitive-coding-poster-hd-png-download-removebg-preview.png"
+				alt="competition"
+				height="200px"
+				/>
+			<img
+				src="Coding-Bootcamp-Ratings-Dice-removebg-preview.png"
+				alt="bootcamp"
+				height="200px"
+				/>
+			<footer>
+				<p>
+					High Schools Requirement Information Source:
+					<a
+						href="https://uwaterloo.ca/future-students/programs/software-engineering"
+						>University Of Waterloo</a
+						>
+					<br />
+					Definition Source:
+					<a href="https://languages.oup.com/">Oxford Languages</a>
+				</p>
+			</footer>
+		</div>
+	</body>
 </html>
