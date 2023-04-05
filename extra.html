@@ -1,190 +1,178 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <!-- charts.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
-    <title>Extra Information</title>
-  </head>
-  <!-- Main Content -->
-  <body>
-    <!-- Container -->
-    <div class="container">
-      <!-- Nav Bar -->
-      <nav class="navbar">
-        <ul class="nav nav-tabs navbar-fixed-to-top">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="requirements.html">Job Requirements</a></li>
-          <li><a href="prosandcons.html">Pros & Cons</a></li>
-          <li class="active"><a href="extra.html">Extra Information</a></li>
-        </ul>
-      </nav>
-      <center>
-        <h1><b>Extra Information About Being A Software Engineer</b></h1>
-      </center>
-      <br />
-      <h2><b>Typical Work Day Schedule</b></h2>
-
-      <!-- Timeline -->
-      <section class="time-line-box">
-        <div class="swiper-container text-center">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">9:00 AM</span></div>
-              <div class="status"><span>Work Hours Start</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">10:00 AM</span></div>
-              <div class="status"><span>Short Standup Meeting</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">11:00 AM</span></div>
-              <div class="status"><span>Work</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">12:00 PM</span></div>
-              <div class="status"><span>Lunch Break</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">1:00 PM</span></div>
-              <div class="status"><span>Work</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">2:00 PM</span></div>
-              <div class="status"><span>Work</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">3:00 PM</span></div>
-              <div class="status"><span>Status Update Meeting</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">4:00 PM</span></div>
-              <div class="status"><span>Work</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">5:00 PM</span></div>
-              <div class="status"><span>Work Hours Over</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">6:00 PM</span></div>
-              <div class="status"><span>Work Outside Of Work Hours</span></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="timestamp"><span class="date">7:00 PM</span></div>
-              <div class="status"><span>Work Outside Of Work Hours</span></div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      <br />
-      <p>
-        Even though most employers hire you to work from 9:00 AM to 5:00 PM,
-        they expect you to work outside of the work hours they assigned you.
-        They want you to work extra so that you meet the deadlines for projects.
-        This usually means that you have to work for 1-2 hours after work is
-        over and 2-3 hours on weekends. In total, you will
-        <b>50-60 hours weekly</b>.
-      </p>
-
-      <br />
-
-      <canvas id="myChart" style="width: 100%; max-width: 600px;"></canvas>
-
-      <script>
-        var xValues = [
-          "1-2 Years",
-          "2-5 Years",
-          "5-10 Years",
-          "10-20 Years",
-          "20+ Years"
-        ];
-        var yValues = [70000, 90000, 120000, 155000, 175000];
-        var barColors = ["red", "green", "blue", "orange", "purple"];
-
-        new Chart("myChart", {
-          type: "bar",
-          data: {
-            labels: xValues,
-            datasets: [
-              {
-                backgroundColor: barColors,
-                data: yValues
-              }
-            ]
-          },
-          options: {
-            legend: { display: false },
-            title: {
-              display: true,
-              text: "Average Software Engineer Salary"
-            }
-          }
-        });
-      </script>
-
-      <p><b>X-Axis: Years Of Experience</b></p>
-      <p><b>Y-Axis: Yearly Salary ($)</b></p>
-      <center>
-        <h4><b>Average Yearly Salary: $122000</b></h4>
-      </center>
-
-      <br />
-
-      <h2><b>Job Perks</b></h2>
-      <p>
-        One of the better thing of being a software engineer is that you can work
-        from an office or from your home. This means that you can still work for
-        a company if you live in a another country. Another perk is that you get
-        3-5 weeks of vacation a year. Your work hours are also flexible. If you
-        finish all your work, you can stop working, even if it is during your
-        work hours (you still have to attend meetings). Finally, depending on
-        your experience and current salary, you can get bonuses and promotions
-        based on your performance. These bonuses can earn you up to $10, 000
-        annually.
-      </p>
-
-      <br />
-
-      <footer>
-        <p>
-          Salary And Bonus Information Source:
-          <a
-            href="https://www.dice.com/career-advice/software-developer-salary-necessary-skills-bonuses-more"
-            >Dice Jobs</a
-          >
-          <br />
-          Weekly Working Hours Source:
-          <a
-            href="https://alcor-bpo.com/your-own-rd-office-news/work-life-balance-for-a-software-engineer/"
-            >Alcor</a
-          >
-        </p>
-      </footer>
-    </div>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+			crossorigin="anonymous"
+			/>
+		<!-- Bootstrap JavaScript -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"
+			></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- charts.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<title>Extra Information</title>
+	</head>
+	<!-- Main Content -->
+	<body>
+		<!-- Container -->
+		<div class="container">
+			<!-- Nav Bar -->
+			<nav class="navbar">
+				<ul class="nav nav-tabs navbar-fixed-to-top">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="requirements.html">Job Requirements</a></li>
+					<li><a href="prosandcons.html">Pros & Cons</a></li>
+					<li class="active"><a href="extra.html">Extra Information</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+				</ul>
+			</nav>
+			<center>
+				<h1><b>Extra Information About Being A Software Engineer</b></h1>
+			</center>
+			<br />
+			<h2><b>Typical Work Day Schedule</b></h2>
+			<!-- Timeline -->
+			<section class="time-line-box">
+				<div class="swiper-container text-center">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">9:00 AM</span></div>
+							<div class="status"><span>Work Hours Start</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">10:00 AM</span></div>
+							<div class="status"><span>Short Standup Meeting</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">11:00 AM</span></div>
+							<div class="status"><span>Work</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">12:00 PM</span></div>
+							<div class="status"><span>Lunch Break</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">1:00 PM</span></div>
+							<div class="status"><span>Work</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">2:00 PM</span></div>
+							<div class="status"><span>Work</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">3:00 PM</span></div>
+							<div class="status"><span>Status Update Meeting</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">4:00 PM</span></div>
+							<div class="status"><span>Work</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">5:00 PM</span></div>
+							<div class="status"><span>Work Hours Over</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">6:00 PM</span></div>
+							<div class="status"><span>Work Outside Of Work Hours</span></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="timestamp"><span class="date">7:00 PM</span></div>
+							<div class="status"><span>Work Outside Of Work Hours</span></div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<br />
+			<p>
+				Even though most employers hire you to work from 9:00 AM to 5:00 PM,
+				they expect you to work outside of the work hours they assigned you.
+				They want you to work extra so that you meet the deadlines for projects.
+				This usually means that you have to work for 1-2 hours after work is
+				over and 2-3 hours on weekends. In total, you will
+				<b>50-60 hours weekly</b>.
+			</p>
+			<br />
+			<center>
+				<canvas id="myChart" style="width: 100%; max-width: 600px;"></canvas>
+			</center>
+			<script>
+				var xValues = [
+				  "1-2 Years",
+				  "2-5 Years",
+				  "5-10 Years",
+				  "10-20 Years",
+				  "20+ Years"
+				];
+				var yValues = [70000, 90000, 120000, 155000, 175000];
+				var barColors = ["red", "green", "blue", "orange", "purple"];
+				
+				new Chart("myChart", {
+				  type: "bar",
+				  data: {
+				    labels: xValues,
+				    datasets: [
+				      {
+				        backgroundColor: barColors,
+				        data: yValues
+				      }
+				    ]
+				  },
+				  options: {
+				    legend: { display: false },
+				    title: {
+				      display: true,
+				      text: "Average Software Engineer Salary"
+				    }
+				  }
+				});
+			</script>
+			<p><b>X-Axis: Years Of Experience</b></p>
+			<p><b>Y-Axis: Yearly Salary (CAD)</b></p>
+			<center>
+				<h4><b>Average Yearly Salary: $122,000</b></h4>
+			</center>
+			<br />
+			<h2><b>Job Perks</b></h2>
+			<p>
+				One of the better thing of being a software engineer is that you can
+				work from an office or from your home. This means that you can still
+				work for a company if you live in a another country. Another perk is
+				that you get 3-5 weeks of vacation a year. Your work hours are also
+				flexible. If you finish all your work, you can stop working, even if it
+				is during your work hours (you still have to attend meetings). Finally,
+				depending on your experience and current salary, you can get bonuses and
+				promotions based on your performance. These bonuses can earn you up to
+				$25, 000 annually.
+			</p>
+			<br />
+			<footer>
+				<p>
+					Salary And Bonus Information Source:
+					<a
+						href="https://www.dice.com/career-advice/software-developer-salary-necessary-skills-bonuses-more"
+						>Dice Jobs</a
+						>
+					<br />
+					Weekly Working Hours Source:
+					<a
+						href="https://alcor-bpo.com/your-own-rd-office-news/work-life-balance-for-a-software-engineer/"
+						>Alcor</a
+						>
+				</p>
+			</footer>
+		</div>
+	</body>
 </html>
